@@ -2,7 +2,7 @@
 
 <font size="3">
 
-<a href="https://github.com/Aeonss/MFCScraper/releases/latest/">MFC-Scraper</a> scrapes results of figures and figure information on [MyFigureCollection](https://myfigurecollection.net/).
+<a href="https://github.com/Aeonss/MFCScraper/blob/master/MFC.py">MFCScraper</a> scrapes results of figures and figure information on [MyFigureCollection](https://myfigurecollection.net/).
 
 
 ## 🔨 &nbsp; Installation
