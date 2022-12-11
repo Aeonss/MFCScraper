@@ -24,7 +24,7 @@ pip install -r requirements.txt
 ## 🚀 &nbsp; Usage
 
 
-Get figure information with figure id (Figure)
+Get figure information with figure id
 ``` bash
 from MFC import MFC
 figure = MFC.searchFigure("1711391")
@@ -46,7 +46,7 @@ dimensions = figure.dimensions
 
 ```
 
-Get a list of figures with character name (List of FigureResult)
+Get a list of figures with character name
 ``` bash
 from MFC import MFC
 result = MFC.search("hatsune miku")
