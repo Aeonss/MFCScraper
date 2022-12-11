@@ -90,5 +90,3 @@ class Figure():
     
     def __repr__(self):
         return self.url
-    
-print(MFC.search("hatsune miku"))

@@ -26,8 +26,8 @@ pip install -r requirements.txt
 
 Get figure information with figure id (Figure)
 ``` bash
-import mfc
-figure = mfc.searchFigure("1711391")
+from MFC import MFC
+figure = MFC.searchFigure("1711391")
 
 # Get information of the figure
 name = figure.name
@@ -48,8 +48,8 @@ dimensions = figure.dimensions
 
 Get a list of figures with character name (List of FigureResult)
 ``` bash
-import mfc
-result = mfc.search("hatsune miku")
+from MFC import MFC
+result = MFC.search("hatsune miku")
 
 # Get information of the first figure in the results
 name = result[0].name
