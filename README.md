@@ -13,7 +13,7 @@ https://www.python.org/downloads/
 
 Download source file and add to your project folder
 ``` bash
-https://github.com/Aeonss/MFCScraper/blob/main/MFC.py
+https://github.com/Aeonss/MFCScraper/blob/master/MFC.py
 ```
 
 Download the requirements:
