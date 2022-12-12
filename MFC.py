@@ -3,20 +3,25 @@ import urllib.request
 
 
 class MFC():
-    
-    def search(search):
+
+    def search(search, show_draft=False):
+        print(show_draft)
         source = urllib.request.urlopen('https://myfigurecollection.net/browse.v4.php?rootId=0&character=' + search.replace(" ", "%20")).read()
         soup = BeautifulSoup(source, 'html.parser')
         search_results = soup.findAll("span", class_="item-icon")
         figure_list = []
+        
         for result in search_results:
             a = result.find("a")
-            url = "https://myfigurecollection.net" + a['href']
-            figure_id = url.split("/")[-1]
-            thumbnail = a.find("img")['src']
-            name = a.find("img")['alt']
-        
-            figure_list.append(FigureResult(name, figure_id, url, thumbnail))
+            draft = a.find("span", class_="item-is-draft")
+            
+            if not draft or show_draft:
+                url = "https://myfigurecollection.net" + a['href']
+                figure_id = url.split("/")[-1]
+                thumbnail = a.find("img")['src']
+                name = a.find("img")['alt']
+            
+                figure_list.append(FigureResult(name, figure_id, url, thumbnail))
         
         return figure_list
     

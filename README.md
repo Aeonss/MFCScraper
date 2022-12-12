@@ -51,6 +51,9 @@ Get a list of figures with character name
 from MFC import MFC
 result = MFC.search("hatsune miku")
 
+# Alternatively, show draft figures that have no yet been released
+# result = MFC.search("hatsune miku", show_draft=True)
+
 # Get information of the first figure in the results
 name = result[0].name
 figure_id = result[0].figure_id
