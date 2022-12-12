@@ -4,9 +4,8 @@ import urllib.request
 
 class MFC():
 
-    def search(search, show_draft=False):
-        print(show_draft)
-        source = urllib.request.urlopen('https://myfigurecollection.net/browse.v4.php?rootId=0&character=' + search.replace(" ", "%20")).read()
+    def search(search, sort="date", order="desc", show_draft=False):
+        source = urllib.request.urlopen("https://myfigurecollection.net/browse.v4.php?rootId=0&sort=" + sort + "&order=" + order + "&character=" + search.replace(" ", "%20")).read()
         soup = BeautifulSoup(source, 'html.parser')
         search_results = soup.findAll("span", class_="item-icon")
         figure_list = []

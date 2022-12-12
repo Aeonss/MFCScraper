@@ -61,6 +61,27 @@ url = result[0].url
 thumbnail = result[0].thumbnail
 ```
 
+Sorting and ordering figure results
+``` bash
+# Default order is desc.
+# Default sort is by release date 
+
+# Find hatsune miku figures, sorted by release date, from newest to oldest, no drafts
+result = MFC.search("hatsune miku")
+
+# Does the same thing, since all options are defaulted
+result = MFC.search("hatsune miku", sort="date", order="desc", show_draft=False)
+
+# Find hatsune miku figures, sorted by release date, from oldest to newest, showing drafts
+result = MFC.search("hatsune miku", sort="date", order="asc", show_draft=True)
+
+# Find hatsune miku figures, sorted by popularity
+result = MFC.search("hatsune miku", sort="popularity")
+
+# Find hatsune miku figures, sorted by price
+result = MFC.search("hatsune miku", sort="price")
+
+```
 
 ## 📘 &nbsp; License
 MFCScraper is released under the [MIT license](https://github.com/Aeonss/MFCScraper/blob/master/LICENSE.md).
